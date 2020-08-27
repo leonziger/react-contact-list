@@ -21,7 +21,7 @@ export const ContactsList = () => {
             <input type="text" className="search-field" onChange={handleSearch}/>
             <ul className="contacts-list">
                 {
-                    displayedContacts.map((element, index) => <Contact
+                    displayedContacts.map((element) => <Contact
                             item={element} key={element.id}
                         />
 

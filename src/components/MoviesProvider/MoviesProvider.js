@@ -4,17 +4,26 @@ import { CONTACTS } from "../../api/contacts";
 export const MoviesContext = React.createContext({});
 
 export const MoviesProvider = ({ children }) => {
+    let contactsIds = [];
+    let objId = {};
+    CONTACTS.map(element => {
+        objId = {id: element.id, state: false};
+        contactsIds.push(objId);
+        return contactsIds;
+    });
+    console.log(contactsIds);
+
     const [ displayedContacts, setDisplayedContacts ] = useState(CONTACTS);
-    const [ contactIsOpen, setContactIsOpen ] = useState(false);
+    const [ activeIds, setActiveIds ] = useState(contactsIds);
 
     const globalParams = {
         //vars
         displayedContacts,
-        contactIsOpen,
+        activeIds,
 
         // functions
         setDisplayedContacts,
-        setContactIsOpen
+        setActiveIds
     };
 
     return (

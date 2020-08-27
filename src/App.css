@@ -49,3 +49,11 @@
 .contact-additional {
   transition: 0.3s;
 }
+
+.hide {
+  display: none;
+}
+
+.open {
+  display: block;
+}
