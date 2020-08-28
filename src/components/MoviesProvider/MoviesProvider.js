@@ -11,7 +11,6 @@ export const MoviesProvider = ({ children }) => {
         contactsIds.push(objId);
         return contactsIds;
     });
-    console.log(contactsIds);
 
     const [ displayedContacts, setDisplayedContacts ] = useState(CONTACTS);
     const [ activeIds, setActiveIds ] = useState(contactsIds);
